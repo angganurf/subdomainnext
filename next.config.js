@@ -4,6 +4,7 @@
 module.exports = {
   experimental: {
     serverActions: {
+      allowedOrigins: ["app.injmonks.site"],
       allowedOrigins: ["app.localhost:3000"],
     },
   },
