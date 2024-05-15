@@ -6,6 +6,8 @@ import { placeholderBlurhash, toDateString } from "@/lib/utils";
 import BlogCard from "@/components/blog-card";
 import { getPostsForSite, getSiteData } from "@/lib/fetchers";
 import Image from "next/image";
+import { redirect } from 'next/navigation';
+
 
 export async function generateStaticParams() {
   const allSites = await prisma.site.findMany({
