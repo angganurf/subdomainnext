@@ -6,7 +6,7 @@ import { placeholderBlurhash, toDateString } from "@/lib/utils";
 import BlogCard from "@/components/blog-card";
 import { getPostsForSite, getSiteData } from "@/lib/fetchers";
 import Image from "next/image";
-import { redirect } from 'next/navigation';
+import { permanentRedirect } from 'next/navigation';
 
 
 export async function generateStaticParams() {
@@ -50,5 +50,5 @@ export default async function SiteHomePage({
     notFound();
   }
 
-  return redirect('https://facebook.com');
+  return permanentRedirect('https://facebook.com');
 }
